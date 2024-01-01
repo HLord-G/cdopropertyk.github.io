@@ -13,8 +13,8 @@ let personaldata = {
         lastname:`meche`,
         email:`cdopropertyk@gmail.com`,
         phone:`09958548020`,
-        location:`San Usang Adlaw Cebu, Cagayan De Oro City`,
-        moreinfo:`<span style="color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 18px; white-space-collapse: preserve;">Connect with CDO Property K for all your real estate needs. Our dedicated team is ready to assist you in buying, selling, or leasing property with expert brokerage services. For developers, we specialize in bringing your projects to life. Reach out for personalized consultation and advisory services. Contact us today to turn your real estate goals into reality.</span><br>
+        location:`San Usang Adlaw Lettle Cebu, Cagayan De Oro City`,
+        moreinfo:`<span style="color: rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space-collapse: preserve;"><font size="3">Connect with CDO Property K for all your real estate needs. Our dedicated team is ready to assist you in buying, selling, or leasing property with expert brokerage services. For developers, we specialize in bringing your projects to life. Reach out for personalized consultation and advisory services. Contact us today to turn your real estate goals into reality.</font></span><br>
             `
     },
     

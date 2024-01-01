@@ -9,6 +9,10 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -23,6 +27,8 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="admin/database/personal.js"></script>
+  <script src="admin/database/ourservices.js"></script>
 
 </head>
 
@@ -350,20 +356,16 @@
                   <!-- <span class="bi bi-cart"></span> -->
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Lifestyle</h2>
+                  <h2 class="title-c" id="servicea"></h2>
                 </div>
               </div>
               <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
-                </p>
+                <p class="content-c" id="servicea_c"> </p>
               </div>
               <div class="card-footer-c">
-                <a href="servicea.html" class="link-c link-icon">Read more
+                <!-- <a href="servicea.html" class="link-c link-icon">Read more
                   <span class="bi bi-chevron-right"></span>
-                </a>
+                </a> -->
               </div>
             </div>
           </div>
@@ -379,20 +381,18 @@
                   <!-- <span class="bi bi-calendar4-week"></span> -->
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Loans</h2>
+                  <h2 class="title-c"  id="serviceb"> </h2>
                 </div>
               </div>
               <div class="card-body-c">
-                <p class="content-c">
-                  Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a.
+                <p class="content-c"  id="serviceb_c">
+ 
                 </p>
               </div>
               <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
+                <!-- <a href="#" class="link-c link-icon">Read more
                   <span class="bi bi-calendar4-week"></span>
-                </a>
+                </a> -->
               </div>
             </div>
           </div>
@@ -403,20 +403,18 @@
                   <!-- <span class="bi bi-card-checklist"></span> -->
                 </div>
                 <div class="card-title-c align-self-center">
-                  <h2 class="title-c">Sell</h2>
+                  <h2 class="title-c" id="servicec"> </h2>
                 </div>
               </div>
               <div class="card-body-c">
-                <p class="content-c">
-                  Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                  convallis a pellentesque
-                  nec, egestas non nisi.
+                <p class="content-c"   id="servicec_c">
+ 
                 </p>
               </div>
               <div class="card-footer-c">
-                <a href="#" class="link-c link-icon">Read more
+                <!-- <a href="#" class="link-c link-icon">Read more
                   <span class="bi bi-chevron-right"></span>
-                </a>
+                </a> -->
               </div>
             </div>
           </div>
@@ -778,10 +776,10 @@
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> <span id="phone_output"></span>
+                  <span class="color-text-a">Phone .</span> <span class="phone_output"></span>
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> <span id="email_output"></span>
+                  <span class="color-text-a">Email .</span> <span class="email_output"></span>
                 </li>
               </ul>
             </div>
@@ -904,3 +902,37 @@
 </body>
 
 </html>
+
+
+<script>
+  for (let index = 0; index < $(".email_output").length; index++) {
+    $(".email_output").eq(index).html(personaldata.personal_info.email)
+  }
+  for (let index = 0; index < $(".phone_output").length; index++) {
+    $(".phone_output").eq(index).html(personaldata.personal_info.phone)
+  }
+ 
+
+  for (let index = 0; index < $(".sitename_ni").length; index++) {
+      $(".sitename_ni").eq(index).html(personaldata.sitesec.sitename)
+    }
+
+</script>
+
+
+
+
+
+<script>
+
+$("#servicea").html(ourservices.servicesA.title)
+$("#servicea_c").html(ourservices.servicesA.content)
+ 
+$("#serviceb").html(ourservices.servicesB.title)
+$("#serviceb_c").html(ourservices.servicesB.content)
+ 
+$("#servicec").html(ourservices.servicesC.title)
+$("#servicec_c").html(ourservices.servicesC.content)
+ 
+
+</script>

@@ -12,7 +12,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script> -->
+  <script src="database/personal.js"></script>
 
+  
   <!-- endinject -->
   <!-- plugin css for this page -->
   <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -21,7 +23,7 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
-  <script src="database/personal.js"></script>
+
 </head>
 <body>
   <div class="container-scroller">

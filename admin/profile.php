@@ -273,6 +273,35 @@
             <input type="text" class="form-control" id="location" placeholder="Location">
         </div>
 
+        <div class="form-group">
+            <label for="exampleTextarea1">Contact Info</label>
+            <div>
+
+            <button style="margin-bottom:5px;" class="btn btn-primary btn-sm" onclick="execCmd('bold')"><i class="mdi mdi-format-bold"></i></button>
+            <button style="margin-bottom:5px;" class="btn btn-primary btn-sm " onclick="execCmd('italic')"><i class="mdi mdi-format-italic"></i></button>
+            <button style="margin-bottom:5px;" class="btn btn-primary btn-sm" onclick="execCmd('underline')"><i class="mdi mdi-format-underline"></i></button>
+
+            
+            <button style="margin-bottom:5px;" class="btn btn-primary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mdi mdi-format-size"></i></button>
+            <div class="dropdown-menu" style="">
+                <button class="dropdown-item" onclick="execCmd('fontSize','1')">   x-Small   </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','2')">   Small     </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','3')">   Regular   </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','4')">   Medium    </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','5')">   Large     </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','6')">   x-Large   </button>
+                <button class="dropdown-item" onclick="execCmd('fontSize','7')">   xx-Large  </button>
+            </div>
+
+            <button style="margin-bottom:5px;" class="btn btn-primary btn-sm" onclick="execCmd('insertUnorderedList')"><i class="mdi mdi-format-list-bulleted"></i></button>
+            </div>
+            <div class="form-control" contenteditable="true" id="contectinfo" rows="4">
+            Contact More Info
+            <br><br><br><br><br><br>
+            </div>
+        </div>
+
+
         <br><br><br><br><br>
         <h4 class="card-title"><b>Social Media Link</b></h4>
         <hr>

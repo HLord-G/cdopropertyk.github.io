@@ -9,6 +9,8 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -24,6 +26,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="admin/database/personal.js"></script>
+
 
   <!-- =======================================================
   * Template Name: EstateAgency
@@ -130,6 +134,16 @@
     </div>
   </div><!-- End Property Search Section -->>
 
+
+
+
+
+
+
+
+
+
+
   <!-- ======= Header/Navbar ======= -->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -178,7 +192,7 @@
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
               <h1 class="title-single">Contact US</h1>
-              <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>
+              <span class="color-text-a contactinfo"> </span>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
@@ -258,10 +272,10 @@
                     </div>
                     <div class="icon-box-content">
                       <p class="mb-1">Email.
-                        <span class="color-a">contact@example.com</span>
+                        <span class="color-a"><span class="email_output"></span>
                       </p>
                       <p class="mb-1">Phone.
-                        <span class="color-a">+54 356 945234</span>
+                        <span class="color-a"><span class="phone_output"></span>
                       </p>
                     </div>
                   </div>
@@ -275,10 +289,7 @@
                       <h4 class="icon-title">Find us in</h4>
                     </div>
                     <div class="icon-box-content">
-                      <p class="mb-1">
-                        Manhattan, Nueva York 10036,
-                        <br> EE. UU.
-                      </p>
+                      <p class="mb-1 locationst"></p>
                     </div>
                   </div>
                 </div>
@@ -334,21 +345,21 @@
         <div class="col-sm-12 col-md-4">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
+              <h3 class="w-title-a text-brand"><span class="sitename_ni"></span></h3>
             </div>
             <div class="w-body-a">
-              <p class="w-text-a color-text-a">
+              <!-- <p class="w-text-a color-text-a">
                 Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
                 sed aute irure.
-              </p>
+              </p> -->
             </div>
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com
+                  <span class="color-text-a">Phone .</span> <span class="phone_output"></span>
                 </li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234
+                  <span class="color-text-a">Email .</span> <span class="email_output"></span>
                 </li>
               </ul>
             </div>
@@ -363,19 +374,7 @@
               <div class="w-body-a">
                 <ul class="list-unstyled">
                   <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
+                    <i class="bi bi-chevron-right"></i> <a href="#">FAQ</a>
                   </li>
                   <li class="item-list-a">
                     <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
@@ -388,27 +387,12 @@
         <div class="col-sm-12 col-md-4 section-md-t3">
           <div class="widget-a">
             <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
+              <h3 class="w-title-a text-brand">Terms</h3>
             </div>
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Philippines</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#">Terms of Use</a>
                 </li>
               </ul>
             </div>
@@ -467,7 +451,7 @@
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">CDO Property <span class="color-b">K</span></span> All Rights Reserved.
+              <span class="color-a"><span class="sitename_ni"></span></span> All Rights Reserved.
             </p>
           </div>
           <div class="credits">
@@ -477,7 +461,7 @@
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
           -->
-          Designed by <a href="http://gbytes.my-style.in/">Harold Guzman</a>
+            Designed by <a href="http://gbytes.my-style.in/">Gbytes</a>
           </div>
         </div>
       </div>
@@ -496,5 +480,20 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
+
+
+
+
+<script>
+  for (let index = 0; index < $(".email_output").length; index++) {
+    $(".email_output").eq(index).html(personaldata.personal_info.email)
+  }
+  for (let index = 0; index < $(".phone_output").length; index++) {
+    $(".phone_output").eq(index).html(personaldata.personal_info.phone)
+  }
+  $(".locationst").html(personaldata.personal_info.location)
+
+  $(".contactinfo").html(personaldata.personal_info.moreinfo)
+
+</script>

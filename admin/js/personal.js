@@ -146,9 +146,9 @@ $("#createdata").click(function(){
     personaldata.personal_info.fistname = $("#firstname").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
     personaldata.personal_info.lastname = $("#lastname").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
     personaldata.personal_info.email    = $("#email").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
-    personaldata.personal_info.phone = $("#phone").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+    personaldata.personal_info.phone    = $("#phone").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
     personaldata.personal_info.location = $("#location").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
-    personaldata.personal_info.moreinfo  = $("#contectinfo").html()
+    personaldata.personal_info.moreinfo = $("#contectinfo").html()
 
     personaldata.website_info.about_title  = $("#aboutheader").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
     personaldata.website_info.about  = $("#aboutinfo").html()
@@ -209,8 +209,6 @@ let personaldata = {
             $("#datacollector").val(null)
         });
     }
-
-    
 
 })
 

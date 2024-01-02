@@ -215,42 +215,42 @@
                   </p> <br><br>
 
                   
-                  <form class="forms-sample">
+                  <div class="forms-sample">
                     <b>Services One</b>
                     <div class="form-group">
                       <label for="exampleInputCity1">Title</label>
-                      <input type="text" class="form-control spacepopup" id="#" placeholder="Title">
+                      <input type="text" class="form-control spacepopup" id="sra" placeholder="Title">
                     </div>
                     <div class="form-group">
                       <label for="exampleTextarea1">Textarea</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="20"></textarea>
+                      <textarea class="form-control" id="sra_c" rows="20"></textarea>
                     </div>
                     <br><br>
 
                     <b>Services Two</b>
                     <div class="form-group">
                       <label for="exampleInputCity1">Title</label>
-                      <input type="text" class="form-control" id="#" placeholder="Title">
+                      <input type="text" class="form-control" id="srb" placeholder="Title">
                     </div>
                     <div class="form-group">
                       <label for="exampleTextarea1">Textarea</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="20"></textarea>
+                      <textarea class="form-control" id="srb_c" rows="20"></textarea>
                     </div>
                     <br><br>
 
                     <b>Services three</b>
                     <div class="form-group">
                       <label for="exampleInputCity1">Title</label>
-                      <input type="text" class="form-control" id="#" placeholder="Title">
+                      <input type="text" class="form-control" id="src" placeholder="Title">
                     </div>
                     <div class="form-group">
                       <label for="exampleTextarea1">Textarea</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="20"></textarea>
+                      <textarea class="form-control" id="src_c" rows="20"></textarea>
                     </div>
                     <br>
 
-                    <button type="submit" class="btn btn-primary me-2">Save</button>
-                  </form>
+                    <button type="submit" id="create" class="btn btn-primary me-2">Save</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,6 +273,86 @@
     <!-- page-body-wrapper ends -->
   </div>
   <!-- container-scroller -->
+
+
+
+
+
+
+
+
+
+<textarea name="" id="dataholder" style="width:100%; visibility:hidden;"></textarea>
+  <script>
+
+  $("#sra").val(ourservices.servicesA.title)
+  $("#sra_c").val(ourservices.servicesA.content)
+  $("#srb").val(ourservices.servicesB.title)
+  $("#srb_c").val(ourservices.servicesB.content)
+  $("#src").val(ourservices.servicesC.title)
+  $("#src_c").val(ourservices.servicesC.content)
+
+
+
+
+
+
+
+  $("#create").click(function(){
+
+      ourservices.servicesA.title     = $("#sra").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+      ourservices.servicesB.title     = $("#srb").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+      ourservices.servicesC.title     = $("#src").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+      ourservices.servicesA.content   = $("#sra_c").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+      ourservices.servicesB.content   = $("#srb_c").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+      ourservices.servicesC.content   = $("#src_c").val().split('"').join('&#34;').split("'").join('&#39;').split('`').join('&#96;').split('$').join('&#36;').split('{').join('&#123;').split('}').join('&#125;').split('<').join('&#60;').split('>').join('&#62;').trim()
+
+
+      $("#dataholder").val(`
+let ourservices = {
+    servicesA:{
+        title:\`${ourservices.servicesA.title}\`,
+        content:\`${ourservices.servicesA.content}\`
+    },
+    servicesB:{
+        title:\`${ourservices.servicesB.title}\`,
+        content:\`${ourservices.servicesB.content}\`
+    },    
+    servicesC:{
+        title:\`${ourservices.servicesC.title}\`,
+        content:\`${ourservices.servicesC.content}\`
+    }
+}
+      `);
+
+
+      $.post("database/ourservices.php",
+        {
+          datasave: `${$("#dataholder").val()}`,
+          submit_ourservice:"sent"
+        },
+
+        function(data, status){
+            $("#datacollector").val(null)
+        });
+
+  })
+
+
+
+  
+
+  </script>
+
+
+
+
+
+
+
+
+
+
 
 
 
